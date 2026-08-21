@@ -1,0 +1,867 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#17121a">
+<title>Для тебя ❤️</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#fff8f7">
+<title>Для тебя ♡</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600&display=swap');
+:root{--bg:#fff8f7;--paper:#fffdfc;--ink:#302a2c;--muted:#81787a;--rose:#e99aa5;--soft:#f8e2e4}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(circle at 20% 0%,#ffeef0,transparent 35%),var(--bg);color:var(--ink);font-family:Manrope,sans-serif}
+.page{width:min(100%,760px);margin:auto;padding:12px 16px 50px}
+nav{height:60px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:"Cormorant Garamond",serif;font-weight:700;font-size:30px}.heart{color:var(--rose)}.navheart{font-size:27px}
+.hero{min-height:calc(100svh - 85px);display:flex;align-items:center;justify-content:center;text-align:center;position:relative;padding:35px 8px}
+.hero:before,.hero:after{content:"♡";position:absolute;color:#efb4bb;font-size:44px;opacity:.7}.hero:before{top:12%;left:5%;transform:rotate(-15deg)}.hero:after{bottom:12%;right:7%;transform:rotate(18deg)}
+.hero h1{font-family:"Cormorant Garamond",serif;font-size:clamp(62px,17vw,105px);line-height:.78;margin:0 0 28px}
+.hero p{max-width:470px;margin:auto;color:var(--muted);line-height:1.7;font-size:15px}
+.cta{display:inline-flex;margin-top:28px;padding:15px 23px;border-radius:999px;background:var(--ink);color:#fff;text-decoration:none;font-size:14px;box-shadow:0 12px 30px #3a25252b}
+.section{padding:45px 0}.section h2{font-family:"Cormorant Garamond",serif;font-size:42px;margin:0 0 17px}
+.note{background:var(--paper);border:1px solid #f2e5e4;border-radius:28px;padding:27px;box-shadow:0 14px 40px #67484812}
+.note .small{color:var(--rose);font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+.note p{font-family:"Cormorant Garamond",serif;font-size:27px;line-height:1.25;margin:12px 0 0}
+
+.videos{display:grid;gap:14px}
+.video-card{background:var(--paper);border:1px solid #f2e5e4;border-radius:26px;padding:10px;box-shadow:0 14px 40px #67484812;overflow:hidden}
+.video-card video{width:100%;display:block;border-radius:20px;background:#1d1718;max-height:520px;object-fit:cover}
+.video-caption{padding:14px 8px 8px;text-align:center}
+.video-caption b{font-family:"Cormorant Garamond",serif;font-size:25px;font-weight:600}
+.video-caption span{display:block;color:var(--muted);font-size:13px;margin-top:4px}
+@media(max-width:520px){.video-card{padding:8px}.video-caption b{font-size:23px}}
+
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:9px}.card{border:0;padding:0;background:none;overflow:hidden;border-radius:22px;box-shadow:0 10px 25px #67484816}
+.card:first-child{grid-column:1/-1;aspect-ratio:16/10}.card:not(:first-child){aspect-ratio:1/1.12}
+.card img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .45s}.card:hover img{transform:scale(1.03)}
+.reasons{display:grid;gap:10px}.reason{display:flex;gap:15px;align-items:flex-start;background:var(--paper);border-radius:20px;padding:18px}
+.reason b{color:var(--rose);font-size:20px}.reason span{color:#625b5c;line-height:1.55;font-size:14px}
+.final{background:var(--soft);border-radius:30px;padding:35px 23px;text-align:center}.final .bigheart{font-size:38px}
+.final h2{font-size:47px;margin:10px 0}.final p{color:#6f6667;line-height:1.7;margin:0}
+footer{text-align:center;color:#aaa;font-size:12px;margin-top:30px}
+.reveal{opacity:0;transform:translateY(18px);transition:.7s ease}.reveal.show{opacity:1;transform:none}
+@media(max-width:520px){.page{padding:8px 12px 35px}.hero h1{font-size:72px}.section{padding:35px 0}.section h2{font-size:38px}.note{padding:22px}.note p{font-size:25px}}
+
+<style id="second-gift-style">
+.second-gift{
+  position:relative;
+  overflow:hidden;
+  background:rgba(255,253,252,.78);
+  border:1px solid rgba(242,229,228,.9);
+  border-radius:32px;
+  padding:38px 25px;
+  text-align:center;
+  box-shadow:0 18px 50px rgba(103,72,72,.12);
+}
+.second-gift:before,.second-gift:after{
+  content:"♡";
+  position:absolute;
+  color:#e99aa5;
+  opacity:.45;
+  font-size:52px;
+}
+.second-gift:before{left:18px;top:12px;transform:rotate(-18deg)}
+.second-gift:after{right:18px;bottom:8px;transform:rotate(18deg)}
+.second-gift .label{
+  color:#e99aa5;
+  font-size:13px;
+  font-weight:600;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.second-gift h2{
+  margin:9px 0 18px;
+  font-family:"Cormorant Garamond",serif;
+  font-size:48px;
+}
+.second-gift p{
+  max-width:560px;
+  margin:0 auto;
+  color:#625b5c;
+  line-height:1.75;
+  font-size:15px;
+}
+.second-gift .sweet{
+  margin-top:24px;
+  display:grid;
+  gap:10px;
+  text-align:left;
+}
+.second-gift .sweet div{
+  background:#fff;
+  border-radius:18px;
+  padding:15px 17px;
+  color:#625b5c;
+  line-height:1.5;
+}
+.second-gift .sweet b{
+  color:#e99aa5;
+  margin-right:7px;
+}
+</style>
+
+</style>
+
+<style id="gift-address-style">
+.gift-address{
+  margin:30px auto 0;
+  max-width:600px;
+  padding:22px 20px;
+  border-radius:22px;
+  background:rgba(255,244,248,.9);
+  border:1px solid rgba(233,154,165,.35);
+  box-shadow:0 10px 30px rgba(103,72,72,.08);
+}
+.address-label{
+  color:#e28694;
+  font-weight:700;
+  font-size:13px;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  margin-bottom:10px;
+}
+.address-text{
+  color:#4f4849;
+  line-height:1.65;
+  font-size:15px;
+}
+</style>
+
+<style>.upgrade{position:fixed;inset:0;z-index:9999;background:#f9e9ed;display:flex;align-items:center;justify-content:center;text-align:center;transition:.7s}.upgrade.hide{opacity:0;visibility:hidden}.upgrade-card{max-width:500px;padding:30px}.upgrade h1{font-size:52px;margin:15px}.upgrade button,.reveal-btn{border:0;border-radius:999px;padding:13px 22px;background:#e99aa5;color:white;font-weight:700;cursor:pointer;box-shadow:0 10px 25px #d88}.hidden{display:none}.hidden.show{display:block;animation:pop .4s}.extra{padding:24px;margin:20px auto;border-radius:25px;background:#fff5f7;text-align:center;max-width:650px}.extra h2{font-size:38px}@keyframes pop{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:scale(1)}} </style>
+
+
+<style>
+:root{
+  --bg:#120e14; --card:rgba(255,255,255,.09); --line:rgba(255,255,255,.13);
+  --text:#fff8fb; --muted:#d9cbd1; --accent:#ff8fa3; --accent2:#ffd0d9;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0!important; background:var(--bg)!important; color:var(--text);
+  font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+#giftApp{min-height:100vh; overflow:hidden; background:
+ radial-gradient(circle at 15% 15%,rgba(255,143,163,.18),transparent 30%),
+ radial-gradient(circle at 85% 70%,rgba(190,130,255,.12),transparent 32%),
+ linear-gradient(145deg,#120e14,#21141c 55%,#100c12);}
+.gift-hero{min-height:100svh;display:grid;place-items:center;padding:32px 18px;position:relative}
+.gift-hero-inner{width:min(760px,100%);text-align:center;position:relative;z-index:2}
+.kicker{letter-spacing:.22em;text-transform:uppercase;color:var(--accent2);font-size:12px;font-weight:700;margin-bottom:16px}
+.gift-title{font-size:clamp(42px,10vw,86px);line-height:.95;margin:0 0 22px;font-weight:800;letter-spacing:-.05em}
+.gift-title span{display:block;background:linear-gradient(90deg,#fff,#ffd7df,#fff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.gift-subtitle{font-size:clamp(16px,3.5vw,21px);line-height:1.6;color:var(--muted);max-width:620px;margin:0 auto 30px}
+.gift-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.gift-btn{appearance:none;border:1px solid var(--line);background:rgba(255,255,255,.08);color:#fff;padding:14px 20px;border-radius:999px;font-weight:700;cursor:pointer;backdrop-filter:blur(14px);transition:.25s;box-shadow:0 10px 35px rgba(0,0,0,.15)}
+.gift-btn:hover{transform:translateY(-3px);background:rgba(255,255,255,.14)}
+.gift-btn.primary{border-color:transparent;background:linear-gradient(135deg,#ff7892,#c96bff);box-shadow:0 12px 38px rgba(255,120,146,.25)}
+.scroll-hint{margin-top:35px;color:#bcaeb5;font-size:12px;animation:bob 2s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(6px)}}
+.orb{position:absolute;border-radius:50%;filter:blur(2px);opacity:.65;pointer-events:none}
+.orb.one{width:150px;height:150px;background:#ff8fa3;top:12%;left:-40px;animation:float 8s ease-in-out infinite}
+.orb.two{width:100px;height:100px;background:#a974ff;right:-25px;bottom:15%;animation:float 10s ease-in-out infinite reverse}
+@keyframes float{50%{transform:translate(18px,-25px) scale(1.08)}}
+.spark{position:absolute;width:4px;height:4px;border-radius:50%;background:#fff;opacity:.7;animation:twinkle 3s infinite}
+@keyframes twinkle{50%{opacity:.15;transform:scale(.4)}}
+.legacy-wrap{position:relative;z-index:3;background:rgba(255,255,255,.025);border-top:1px solid rgba(255,255,255,.08);padding:26px 0 70px}
+.legacy-content{max-width:1200px;margin:auto}
+.section-card{max-width:900px;margin:20px auto;padding:28px 20px;border:1px solid var(--line);border-radius:28px;background:var(--card);backdrop-filter:blur(18px)}
+.reveal{opacity:0;transform:translateY(24px);transition:.7s ease}
+.reveal.visible{opacity:1;transform:none}
+.reasons{max-width:900px;margin:28px auto;padding:0 20px}
+.reasons h2{text-align:center;font-size:30px}
+.reason-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
+.reason{min-height:130px;padding:18px;border:1px solid var(--line);border-radius:22px;background:rgba(255,255,255,.06);cursor:pointer;transition:.25s}
+.reason:hover{transform:translateY(-4px);background:rgba(255,255,255,.1)}
+.reason b{display:block;font-size:12px;color:var(--accent2);margin-bottom:10px}
+.reason p{margin:0;line-height:1.5;color:#f3e7eb}
+.modal{position:fixed;inset:0;z-index:100;display:none;place-items:center;padding:20px;background:rgba(7,5,9,.75);backdrop-filter:blur(12px)}
+.modal.open{display:grid}
+.modal-box{width:min(560px,100%);padding:34px;border-radius:30px;border:1px solid var(--line);background:linear-gradient(145deg,#271923,#171018);box-shadow:0 30px 100px rgba(0,0,0,.5);text-align:center}
+.modal-box h3{font-size:30px;margin:0 0 14px}.modal-box p{color:var(--muted);line-height:1.7}.close{margin-top:14px}
+.heart{position:fixed;z-index:90;pointer-events:none;font-size:22px;animation:heartFly 2.4s ease-out forwards}
+@keyframes heartFly{from{transform:translateY(0) scale(.7);opacity:0}15%{opacity:1}to{transform:translateY(-180px) translateX(var(--drift)) scale(1.5);opacity:0}}
+@media(max-width:600px){
+ .gift-hero{padding:26px 16px}
+ .section-card{border-radius:22px;margin-left:12px;margin-right:12px}
+}
+</style>
+
+<style id="mobile-readability-fix">
+/* ===== Readability on light/white blocks ===== */
+.legacy-content,
+.legacy-content [style*="background:#fff"],
+.legacy-content [style*="background: #fff"],
+.legacy-content [style*="background:white"],
+.legacy-content [style*="background: white"],
+.legacy-content [style*="background-color:#fff"],
+.legacy-content [style*="background-color: #fff"],
+.legacy-content [style*="background-color:white"],
+.legacy-content [style*="background-color: white"] {
+  color: #241b20;
+}
+.legacy-content [style*="background:#fff"] *,
+.legacy-content [style*="background: #fff"] *,
+.legacy-content [style*="background:white"] *,
+.legacy-content [style*="background: white"] *,
+.legacy-content [style*="background-color:#fff"] *,
+.legacy-content [style*="background-color: #fff"] *,
+.legacy-content [style*="background-color:white"] *,
+.legacy-content [style*="background-color: white"] * {
+  color: #241b20 !important;
+}
+.legacy-content .section-card {
+  color: #241b20;
+}
+.legacy-content .section-card p,
+.legacy-content .section-card li,
+.legacy-content .section-card span,
+.legacy-content .section-card div,
+.legacy-content .section-card label {
+  color: inherit;
+}
+.legacy-content a {
+  color: #b33f63;
+  text-underline-offset: 3px;
+}
+.legacy-content h1,
+.legacy-content h2,
+.legacy-content h3,
+.legacy-content h4,
+.legacy-content h5,
+.legacy-content h6 {
+  color: #241b20;
+}
+.legacy-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===== Mobile-first stability ===== */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+body {
+  -webkit-text-size-adjust: 100%;
+}
+img, video, iframe, canvas, svg {
+  max-width: 100%;
+}
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}
+button {
+  touch-action: manipulation;
+}
+.gift-hero-inner {
+  width: min(760px, calc(100vw - 32px));
+}
+.gift-title {
+  text-wrap: balance;
+}
+.gift-subtitle {
+  text-wrap: pretty;
+}
+.legacy-wrap {
+  padding-left: max(12px, env(safe-area-inset-left));
+  padding-right: max(12px, env(safe-area-inset-right));
+}
+.section-card {
+  overflow-wrap: anywhere;
+}
+
+/* Avoid huge inherited margins/paddings on phones */
+@media (max-width: 700px) {
+  .gift-hero {
+    min-height: 100svh;
+    padding: 24px 14px 34px;
+  }
+  .gift-title {
+    font-size: clamp(38px, 13vw, 62px);
+    letter-spacing: -.045em;
+    line-height: .98;
+    margin-bottom: 16px;
+  }
+  .gift-subtitle {
+    font-size: 16px;
+    line-height: 1.55;
+    margin-bottom: 22px;
+  }
+  .gift-actions {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .gift-btn {
+    width: 100%;
+    min-height: 48px;
+    padding: 13px 16px;
+    font-size: 15px;
+  }
+  .legacy-wrap {
+    padding-top: 14px;
+    padding-bottom: 88px;
+  }
+  .section-card {
+    margin: 12px 0;
+    padding: 20px 14px;
+    border-radius: 20px;
+  }
+  .legacy-content {
+    width: 100%;
+  }
+  .legacy-content h1 {
+    font-size: clamp(26px, 8vw, 40px);
+    line-height: 1.1;
+  }
+  .legacy-content h2 {
+    font-size: clamp(22px, 6.5vw, 32px);
+    line-height: 1.15;
+  }
+  .legacy-content h3 {
+    font-size: clamp(19px, 5.5vw, 27px);
+  }
+  .legacy-content p,
+  .legacy-content li {
+    font-size: 16px;
+    line-height: 1.65;
+  }
+  .legacy-content table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .reason-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .reason {
+    min-height: 0;
+    padding: 17px;
+  }
+  .reasons {
+    padding: 0 0 10px;
+  }
+  .reasons h2 {
+    font-size: 25px;
+    line-height: 1.2;
+  }
+  .modal {
+    padding: 14px;
+  }
+  .modal-box {
+    max-height: calc(100svh - 28px);
+    overflow: auto;
+    padding: 25px 18px;
+    border-radius: 24px;
+  }
+  .modal-box h3 {
+    font-size: 26px;
+  }
+  .modal-box p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+}
+
+/* Extra-small phones */
+@media (max-width: 380px) {
+  .gift-hero {
+    padding-left: 11px;
+    padding-right: 11px;
+  }
+  .gift-title {
+    font-size: 36px;
+  }
+  .gift-subtitle {
+    font-size: 15px;
+  }
+}
+</style>
+
+
+
+
+
+
+
+
+
+<style id="music-opening-section">
+.music-opening{min-height:100svh;display:grid;place-items:center;position:relative;overflow:hidden;padding:40px 18px;background:radial-gradient(circle at 50% 35%,rgba(255,120,146,.18),transparent 30%),linear-gradient(145deg,#100b12,#24151f 58%,#100b12);text-align:center}
+.music-opening::before,.music-opening::after{content:"♡";position:absolute;color:#ff9eb0;opacity:.25;font-size:clamp(90px,18vw,190px);animation:musicFloat 7s ease-in-out infinite}
+.music-opening::before{left:5%;top:12%;transform:rotate(-18deg)}
+.music-opening::after{right:4%;bottom:8%;transform:rotate(18deg);animation-delay:1.5s}
+.music-opening-inner{position:relative;z-index:2;width:min(760px,100%)}
+.music-opening-kicker{color:#ffb2c0;letter-spacing:.24em;text-transform:uppercase;font-size:12px;font-weight:800;margin-bottom:18px}
+.music-opening h2{font-family:"Cormorant Garamond",serif;font-size:clamp(52px,11vw,92px);line-height:.9;margin:0 0 18px;color:#fff}
+.music-opening p{max-width:560px;margin:0 auto 30px;color:#cbbbc2;font-size:16px;line-height:1.7}
+.music-opening-disc{width:clamp(145px,34vw,205px);height:clamp(145px,34vw,205px);margin:0 auto 30px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle,#1d1119 0 17%,#ff8fa3 18% 21%,transparent 22%),conic-gradient(#fff,#ff8fa3,#5f3b50,#ff8fa3,#fff,#5f3b50,#fff);box-shadow:0 0 0 12px rgba(255,255,255,.04),0 25px 80px rgba(255,120,146,.25);animation:musicDiscFloat 4s ease-in-out infinite}
+.music-opening-disc span{width:28px;height:28px;border-radius:50%;background:#120d13;border:2px solid rgba(255,255,255,.25)}
+.music-opening-track{color:#fff;font-weight:700;font-size:15px;margin-bottom:24px}
+.music-opening-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.music-opening-play{border:0;padding:16px 28px;border-radius:999px;background:linear-gradient(135deg,#ff7892,#c96bff);color:#fff;font-weight:800;font-size:15px;cursor:pointer;box-shadow:0 14px 45px rgba(255,120,146,.3);transition:.25s}
+.music-opening-play:hover{transform:translateY(-3px) scale(1.02)}
+.music-opening-skip{border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.06);color:#fff;padding:15px 22px;border-radius:999px;font-weight:700;cursor:pointer}
+.music-opening-note{margin-top:24px;color:#8f7f88;font-size:12px}
+.music-opening.playing .music-opening-disc{animation:musicSpin 4s linear infinite}
+@keyframes musicDiscFloat{50%{transform:translateY(-8px) rotate(3deg)}}
+@keyframes musicSpin{to{transform:rotate(360deg)}}
+@keyframes musicFloat{50%{transform:translateY(-18px) rotate(4deg)}}
+@media(max-width:600px){.music-opening{padding:30px 16px}.music-opening p{font-size:14px}.music-opening-actions>*{width:100%;max-width:320px}}
+</style>
+
+
+<style id="month-love-style">
+.month-love-section h2{text-align:center;color:#241b20}
+.month-love-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;max-width:900px;margin:0 auto}
+.month-love-card{position:relative;padding:25px 24px 24px;border:1px solid rgba(233,154,165,.28);border-radius:25px;background:linear-gradient(145deg,rgba(255,255,255,.95),rgba(255,245,248,.92));box-shadow:0 16px 40px rgba(103,72,72,.10);overflow:hidden}
+.month-love-card:after{content:"";position:absolute;width:110px;height:110px;border-radius:50%;right:-42px;bottom:-52px;background:rgba(233,154,165,.12)}
+.month-love-heart{font-size:30px;color:#e99aa5;line-height:1;margin-bottom:12px}
+.month-love-card p{position:relative;z-index:1;margin:0;font-family:"Cormorant Garamond",serif;font-size:25px;line-height:1.3;color:#403638}
+.month-love-wide{grid-column:1/-1;text-align:center;background:linear-gradient(135deg,#fffdfd,#fff0f4)}
+.month-love-wide .month-love-heart{font-size:32px}
+@media(max-width:700px){
+ .month-love-grid{grid-template-columns:1fr;gap:11px}
+ .month-love-card,.month-love-wide{grid-column:auto}
+ .month-love-card{padding:21px 18px}
+ .month-love-card p{font-size:23px}
+}
+</style>
+
+</head>
+<body>
+<div id="giftApp">
+  <section class="music-opening" id="musicOpening">
+    <div class="music-opening-inner">
+      <div class="music-opening-kicker">сначала — одна песня для тебя</div>
+      <div class="music-opening-disc" id="openingDisc"><span></span></div>
+      <h2>Послушаешь<br>со мной? 🎵</h2>
+      <p>Я выбрал эту песню специально для этого маленького подарка. Нажми кнопку и пусть она играет, пока ты смотришь сайт.</p>
+      <div class="music-opening-track">ENZRO — «Ты не бойся ночи»</div>
+      <div class="music-opening-actions">
+        <button class="music-opening-play" id="openingPlay">▶ Послушать песню</button>
+        <button class="music-opening-skip" id="openingSkip">Смотреть подарок ↓</button>
+      </div>
+      <div class="music-opening-note">Музыка не запускается автоматически — только после твоего нажатия.</div>
+    </div>
+  </section>
+
+  <section class="gift-hero" id="top">
+    <div class="orb one"></div><div class="orb two"></div>
+    <i class="spark" style="top:22%;left:20%"></i><i class="spark" style="top:35%;right:18%;animation-delay:1s"></i>
+    <i class="spark" style="bottom:20%;left:28%;animation-delay:1.7s"></i>
+    <div class="gift-hero-inner">
+      <div class="kicker">маленький подарок для тебя</div>
+      <h1 class="gift-title">Это всё <span>для тебя ❤️</span></h1>
+      <p class="gift-subtitle">Я немного изменил этот сайт, чтобы он стал не просто страницей, а маленьким путешествием по тёплым моментам.</p>
+      <div class="gift-actions">
+        <button class="gift-btn primary" id="openGift">Открыть подарок ✨</button>
+        <button class="gift-btn" id="heartBtn">Подарить сердечко 💗</button>
+      </div>
+      <div class="scroll-hint">листай ниже ↓</div>
+    </div>
+  </section>
+
+  <main class="legacy-wrap">
+    <div class="legacy-content">
+      <div class="section-card reveal">
+
+
+
+<div id="upgrade" class="upgrade"><div class="upgrade-card"><div>маленький сюрприз для тебя ♡</div><h1>У меня для тебя кое-что есть…</h1><p>Но сначала тебе придётся открыть этот сайт до самого конца 👀</p><button onclick="document.getElementById('upgrade').classList.add('hide')">Открыть подарок ✨</button></div></div>
+<main class="page">
+<nav><div class="navheart heart">♡</div><div class="logo">для тебя</div><div class="navheart heart">♡</div></nav>
+
+<section class="hero">
+<div>
+<div class="heart" style="font-size:18px;margin-bottom:15px">маленький подарок</div>
+<h1>Ты<br>особенная.</h1>
+<p>Я собрал здесь несколько наших моментов, чтобы в любой день можно было открыть эту страницу и вспомнить что-нибудь хорошее.</p>
+<a class="cta" href="#letter">открыть подарок ↓</a>
+</div>
+</section>
+
+<section class="section reveal" id="letter">
+<div class="note"><div class="small">небольшое письмо</div>
+<p>Спасибо за все смешные, странные, тёплые и просто хорошие моменты. Пусть их впереди будет ещё очень много. ♡</p></div>
+</section>
+
+<section class="section reveal month-love-section">
+  <h2>Этот месяц с тобой ♡</h2>
+  <div class="month-love-grid">
+    <div class="month-love-card">
+      <div class="month-love-heart">♡</div>
+      <p>Этот месяц рядом с тобой стал одним из самых счастливых периодов моей жизни. Я хочу запомнить каждую его мелочь.</p>
+    </div>
+    <div class="month-love-card">
+      <div class="month-love-heart">♡</div>
+      <p>Всего один месяц, а ощущение такое, будто в моей жизни появилось столько счастья, сколько я давно не чувствовал.</p>
+    </div>
+    <div class="month-love-card month-love-wide">
+      <div class="month-love-heart">♥</div>
+      <p>Если бы меня попросили назвать лучшее, что произошло со мной за последнее время, я бы без сомнений назвал этот месяц — потому что в нём была ты.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section reveal">
+<h2>Наши моменты</h2>
+<div class="gallery">
+<button class="card" data-src="photos/photo1.jpeg"><img src="photos/photo1.jpeg" alt="Наш момент"></button>
+<button class="card" data-src="photos/photo2.jpeg"><img src="photos/photo2.jpeg" alt="Наш момент"></button>
+<button class="card" data-src="photos/photo3.jpeg"><img src="photos/photo3.jpeg" alt="Наш момент"></button>
+<button class="card" data-src="photos/photo4.jpg"><img src="photos/photo4.jpg" alt="Наш момент"></button>
+<button class="card" data-src="photos/photo5.jpg"><img src="photos/photo5.jpg" alt="Наш момент"></button>
+</div>
+</section>
+
+<section class="section reveal">
+<h2>Маленькие кусочки счастья</h2>
+<div class="videos">
+<div class="video-card">
+<video controls playsinline preload="metadata">
+<source src="videos/moment1.mp4" type="video/mp4">
+Твой браузер не поддерживает видео.
+</video>
+<div class="video-caption"><b>Этот момент — для тебя ♡</b><span>маленькое видео, которое хочется пересматривать</span></div>
+</div>
+<div class="video-card">
+<video controls playsinline preload="metadata">
+<source src="videos/moment2.mp4" type="video/mp4">
+Твой браузер не поддерживает видео.
+</video>
+<div class="video-caption"><b>Ещё один кусочек нас ✨</b><span>чтобы сохранить немного тепла здесь</span></div>
+</div>
+</div>
+</section>
+
+<section class="section reveal">
+<h2>И ещё кое-что</h2>
+<div class="reasons">
+<div class="reason"><b>♡</b><span>С тобой даже обычный день может превратиться в воспоминание.</span></div>
+<div class="reason"><b>♡</b><span>Спасибо за улыбки, разговоры и все наши маленькие приколы.</span></div>
+<div class="reason"><b>♡</b><span>А этот сайт — просто маленькое напоминание: ты мне очень дорога.</span></div>
+</div>
+</section>
+
+
+
+
+<section class="section reveal">
+<div class="final"><div class="bigheart heart">♥</div><h2>Для тебя</h2>
+<p>Если тебе сегодня грустно — пусть эта страничка хотя бы немного напомнит о хорошем.</p></div>
+</section>
+<section class="section reveal">
+  <div class="second-gift">
+    <div class="label">вторая часть подарка</div>
+    <h2>Ещё немного для тебя ♡</h2>
+    <p>
+      Если первая часть была маленьким подарком, то эта — просто несколько слов,
+      которые мне хотелось оставить здесь. Ты очень тёплый, красивый и особенный человек.
+      Рядом с тобой хочется улыбаться чаще, замечать мелочи и сохранять самые обычные моменты.
+    </p>
+    <div class="sweet">
+      <div><b>♡</b> Ты заслуживаешь много улыбок, заботы и самых добрых слов.</div>
+      <div><b>♡</b> Пусть у тебя будет как можно больше дней, когда ты по-настоящему счастлива.</div>
+      <div><b>♡</b> Мне очень нравится твоя улыбка, твой характер и то, как ты умеешь делать моменты особенными.</div>
+      <div><b>♡</b> И просто помни: ты чудесная. Именно такая, какая ты есть.</div>
+    </div>
+    <p style="margin-top:25px;font-family:'Cormorant Garamond',serif;font-size:27px;color:#302a2c;">
+      Береги себя, улыбайся чаще и никогда не забывай, какая ты прекрасная. ✨
+    </p>
+    <div class="gift-address">
+      <div class="address-label">🎁 адрес для получение небольшого подарочка)</div>
+      <div class="extra"><h2>🎁 Небольшой сюрприз</h2><p>Если ты дошла до этого места — значит, ты умничка 😌</p><button class="reveal-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Показать адрес 🎁</button><div class="hidden"><div class="address-text">
+        улица 60 лет Победы, 8, подъезд 2,<br>
+        посёлок городского типа Октябрьский,<br>
+        городской округ Люберцы, Московская область (Ozon)
+      </div></div></div>
+      </div>
+      <div class="extra"><button class="reveal-btn" onclick="this.nextElementSibling.classList.add('show')">Нажми сюда, если ты достаточно любопытная 👀</button><div class="hidden">Ну вот, я же знал, что ты нажмёшь 😌<br>Ты очень-очень особенная ♡</div></div><p style="margin-top:20px;font-family:'Cormorant Garamond',serif;font-size:24px;color:#302a2c;">
+        теперь жду от тебя приглашение погулять на набережной и пожевать гамняныков)
+      </p>
+
+    </div>
+
+  </div>
+</section>
+<footer>сделано специально для тебя ♡</footer>
+</main>
+
+<script>
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(x=>observer.observe(x));
+document.querySelectorAll('.card').forEach(card=>card.addEventListener('click',()=>{
+ const overlay=document.createElement('div');
+ overlay.style='position:fixed;inset:0;background:rgba(20,12,14,.9);z-index:20;display:flex;align-items:center;justify-content:center;padding:15px';
+ const img=document.createElement('img'); img.src=card.dataset.src; img.style='max-width:100%;max-height:92vh;border-radius:20px;object-fit:contain';
+ overlay.appendChild(img); overlay.addEventListener('click',()=>overlay.remove()); document.body.appendChild(overlay);
+}));
+</script>
+
+<style id="custom-beautiful-background">
+
+/* === NEW PAGE BACKGROUND === */
+html {
+  min-height: 100%;
+  background: #fff4fa !important;
+}
+body {
+  min-height: 100vh !important;
+  margin: 0 !important;
+  background-color: #fff4fa !important;
+  background-image:
+    radial-gradient(circle at 10% 15%, rgba(255, 145, 195, 0.42) 0, rgba(255, 145, 195, 0) 30%),
+    radial-gradient(circle at 90% 20%, rgba(150, 170, 255, 0.36) 0, rgba(150, 170, 255, 0) 32%),
+    radial-gradient(circle at 50% 100%, rgba(255, 210, 150, 0.34) 0, rgba(255, 210, 150, 0) 35%),
+    linear-gradient(135deg, #fff4fa 0%, #f3efff 50%, #fff8ee 100%) !important;
+  background-attachment: fixed !important;
+  background-size: cover !important;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 20% 80%, rgba(255, 180, 220, .22), transparent 24%),
+    radial-gradient(circle at 80% 70%, rgba(185, 195, 255, .20), transparent 26%);
+}
+
+</style>
+
+<style id="stronger-custom-background">
+
+/* === EXTRA VISIBLE ROMANTIC BACKGROUND === */
+html, body {
+  background-color: #ffd6ea !important;
+  background-image:
+    radial-gradient(circle at 8% 12%, rgba(255, 60, 150, .55) 0, rgba(255, 60, 150, 0) 27%),
+    radial-gradient(circle at 92% 8%, rgba(95, 120, 255, .50) 0, rgba(95, 120, 255, 0) 29%),
+    radial-gradient(circle at 12% 92%, rgba(255, 170, 45, .48) 0, rgba(255, 170, 45, 0) 30%),
+    radial-gradient(circle at 88% 88%, rgba(180, 75, 255, .46) 0, rgba(180, 75, 255, 0) 31%),
+    linear-gradient(125deg, #ffb9dc 0%, #d7c8ff 48%, #ffd7a8 100%) !important;
+  background-attachment: fixed !important;
+  background-size: cover !important;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  z-index: -1;
+  inset: -10%;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 25% 35%, rgba(255,255,255,.35) 0 5px, transparent 7px),
+    radial-gradient(circle at 70% 25%, rgba(255,255,255,.30) 0 4px, transparent 6px),
+    radial-gradient(circle at 45% 75%, rgba(255,255,255,.25) 0 6px, transparent 8px),
+    radial-gradient(circle at 82% 65%, rgba(255,255,255,.28) 0 5px, transparent 7px);
+  background-size: 190px 170px, 230px 210px, 260px 240px, 210px 190px;
+  animation: backgroundGlow 10s ease-in-out infinite alternate;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  z-index: -2;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(115deg, rgba(255,255,255,.18), transparent 35%, rgba(255,255,255,.16) 65%, transparent);
+  animation: backgroundShimmer 14s linear infinite;
+}
+
+@keyframes backgroundGlow {
+  from { transform: scale(1); opacity: .65; }
+  to { transform: scale(1.08); opacity: 1; }
+}
+@keyframes backgroundShimmer {
+  0% { transform: translateX(-8%); }
+  50% { transform: translateX(8%); }
+  100% { transform: translateX(-8%); }
+}
+
+</style>
+
+<script>
+const music = document.getElementById('giftMusic');
+const musicButton = document.getElementById('musicButton');
+
+musicButton.addEventListener('click', async () => {
+  if (music.paused) {
+    try {
+      await music.play();
+      musicButton.textContent = '♫ Выключить музыку';
+      musicButton.classList.add('playing');
+    } catch (err) {
+      musicButton.textContent = '♫ Нажми ещё раз';
+    }
+  } else {
+    music.pause();
+    musicButton.textContent = '♫ Включить музыку';
+    musicButton.classList.remove('playing');
+  }
+});
+
+music.addEventListener('ended', () => {
+  musicButton.textContent = '♫ Включить музыку';
+  musicButton.classList.remove('playing');
+});
+</script>
+
+      </div>
+    </div>
+
+    <section class="reasons reveal">
+      <h2>Несколько причин улыбнуться 💕</h2>
+      <div class="reason-grid">
+        <article class="reason"><b>01</b><p>Потому что рядом с тобой обычные моменты становятся особенными.</p></article>
+        <article class="reason"><b>02</b><p>Потому что твоя улыбка — один из моих любимых видов счастья.</p></article>
+        <article class="reason"><b>03</b><p>Потому что мне хочется создавать с тобой ещё больше воспоминаний.</p></article>
+        <article class="reason"><b>04</b><p>Потому что ты — человек, которому хочется делать приятные сюрпризы.</p></article>
+      </div>
+    </section>
+  </main>
+</div>
+
+
+
+
+<audio id="giftMusic" preload="auto">
+  <source src="music/ENZRO_-_Ty_ne_bojjsya_nochi_81423717.mp3" type="audio/mpeg">
+</audio>
+
+<div class="modal" id="giftModal" role="dialog" aria-modal="true">
+  <div class="modal-box">
+    <div style="font-size:46px">💌</div>
+    <h3>Самое главное</h3>
+    <p>Не обязательно ждать особенного дня, чтобы сказать человеку, насколько он тебе дорог. Пусть этот маленький сайт просто напомнит тебе об этом сегодня.</p>
+    <button class="gift-btn primary close" id="closeModal">Продолжить ❤️</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  const music = document.getElementById('giftMusic');
+  const musicOpening = document.getElementById('musicOpening');
+  const openingPlay = document.getElementById('openingPlay');
+  const openingSkip = document.getElementById('openingSkip');
+  const modal = document.getElementById('giftModal');
+  const openGift = document.getElementById('openGift');
+  const closeModal = document.getElementById('closeModal');
+  const heartBtn = document.getElementById('heartBtn');
+
+  async function startOpeningMusic(){
+    if (music.paused) {
+      try {
+        await music.play();
+        openingPlay.textContent='❚❚ Песня играет';
+        musicOpening.classList.add('playing');
+      } catch(e) {
+        openingPlay.textContent='Нажми ещё раз 🎵';
+      }
+    } else {
+      music.pause();
+      openingPlay.textContent='▶ Послушать песню';
+      musicOpening.classList.remove('playing');
+    }
+  }
+
+  openingPlay.addEventListener('click', startOpeningMusic);
+  openingSkip.addEventListener('click', ()=>document.getElementById('top').scrollIntoView({behavior:'smooth'}));
+
+  music.addEventListener('play',()=>{
+    if(musicOpening) musicOpening.classList.add('playing');
+    if(openingPlay) openingPlay.textContent='❚❚ Песня играет';
+  });
+  music.addEventListener('pause',()=>{
+    if(musicOpening) musicOpening.classList.remove('playing');
+    if(openingPlay) openingPlay.textContent='▶ Послушать песню';
+  });
+
+  music.addEventListener('ended',()=>{
+    if(openingPlay) openingPlay.textContent='▶ Послушать песню';
+    if(musicOpening) musicOpening.classList.remove('playing');
+  });
+
+  openGift.addEventListener('click',()=>{
+    modal.classList.add('open');
+    document.body.style.overflow='hidden';
+    burstHearts(8);
+  });
+  closeModal.addEventListener('click',()=>{
+    modal.classList.remove('open');
+    document.body.style.overflow='';
+    document.querySelector('.legacy-wrap').scrollIntoView({behavior:'smooth'});
+  });
+  modal.addEventListener('click',e=>{if(e.target===modal) closeModal.click()});
+
+  heartBtn.addEventListener('click',()=>burstHearts(18));
+
+  function burstHearts(n){
+    for(let i=0;i<n;i++){
+      const h=document.createElement('span');
+      h.className='heart';
+      h.textContent=['❤️','💗','💕','✨'][Math.floor(Math.random()*4)];
+      h.style.left=(20+Math.random()*60)+'vw';
+      h.style.top=(55+Math.random()*25)+'vh';
+      h.style.setProperty('--drift',(Math.random()*160-80)+'px');
+      h.style.animationDelay=(Math.random()*.5)+'s';
+      document.body.appendChild(h);
+      setTimeout(()=>h.remove(),3000);
+    }
+  }
+
+  const observer=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+  // Add a subtle click effect to reason cards.
+  document.querySelectorAll('.reason').forEach(card=>{
+    card.addEventListener('click',()=>burstHearts(4));
+  });
+})();
+</script>
+
+<script id="readability-runtime">
+(function(){
+  function luminance(r,g,b){
+    const a=[r,g,b].map(v=>v/255).map(v=>v<=.03928?v/12.92:Math.pow((v+.055)/1.055,2.4));
+    return .2126*a[0]+.7152*a[1]+.0722*a[2];
+  }
+  function fixLightBlocks(){
+    document.querySelectorAll('.legacy-content *').forEach(function(el){
+      const cs=getComputedStyle(el);
+      const bg=cs.backgroundColor;
+      const m=bg.match(/rgba?\\((\\d+)[, ]+(\\d+)[, ]+(\\d+)/i);
+      if(!m) return;
+      const alpha = bg.includes('rgba') ? parseFloat(bg.split(',')[3]) : 1;
+      if(alpha < .35) return;
+      const lum=luminance(+m[1],+m[2],+m[3]);
+      if(lum > .78){
+        el.style.color='#241b20';
+        el.querySelectorAll('p,span,div,li,a,h1,h2,h3,h4,h5,h6,label').forEach(function(child){
+          if(getComputedStyle(child).color !== 'rgb(255, 255, 255)'){
+            child.style.color='#241b20';
+          }
+        });
+      }
+    });
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',fixLightBlocks);
+  else fixLightBlocks();
+})();
+</script>
+
+</body>
+</html>
